@@ -7,6 +7,7 @@ class RecipesTransformer:
             "keycloak_user_id": event.get("keycloak_user_id"),
             "cooking_time": event.get("cooking_time"),
             "rating_avg": event.get("rating_avg"),
+            "imageUrl": event.get("imageUrl"),
             "categories": event.get("categories", []),
             "ingredients": event.get("ingredients", []),
             "status": "processing"
