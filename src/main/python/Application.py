@@ -22,7 +22,6 @@ def create_app() -> FastAPI:
 
     app.include_router(recommendation_router)
 
-    # Start RabbitMQ listener in background thread
     threading.Thread(target=start_rabbit_listener, daemon=True).start()
 
     return app
